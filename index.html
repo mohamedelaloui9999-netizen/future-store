@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Future Store 👽</title>
+
+<style>
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:black;
+  color:white;
+  text-align:center;
+  overflow-x:hidden;
+}
+
+/* Alien Overlay */
+#alienOverlay{
+  position:fixed;
+  width:100%;
+  height:100vh;
+  background:black;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  z-index:9999;
+}
+
+#alienOverlay img{
+  width:200px;
+  animation:fadeOut 3s forwards;
+}
+
+@keyframes fadeOut{
+  0%{opacity:1;}
+  80%{opacity:1;}
+  100%{opacity:0; visibility:hidden;}
+}
+
+/* Header */
+header{
+  padding:40px;
+}
+
+h1{
+  color:cyan;
+  text-shadow:0 0 20px cyan;
+}
+
+/* Products */
+#products{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:20px;
+  padding:20px;
+}
+
+.card{
+  background:rgba(255,255,255,0.1);
+  padding:15px;
+  width:250px;
+  border-radius:15px;
+  box-shadow:0 0 15px cyan;
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:scale(1.05);
+  box-shadow:0 0 25px magenta;
+}
+
+a{
+  color:cyan;
+  text-decoration:none;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Alien Intro -->
+<div id="alienOverlay">
+  <img src="https://i.imgur.com/8Qf6QzL.png" alt="Alien">
+</div>
+
+<header>
+  <h1>🚀 Future Digital Store</h1>
+  <p>Web Developer & Cybersecurity Enthusiast</p>
+</header>
+
+<section>
+<h2>📩 Contact</h2>
+<p>Email: 
+<a href="mailto:Mohamedelaloui333@gmail.com">
+Mohamedelaloui333@gmail.com
+</a>
+</p>
+
+<p>Instagram: 
+<a href="https://instagram.com/m.o.h.a.m.e.d.9.9.9.9" target="_blank">
+m.o.h.a.m.e.d.9.9.9.9
+</a>
+</p>
+</section>
+
+<section>
+<h2>🛒 Store</h2>
+<div id="products"></div>
+</section>
+
+<!-- Firebase -->
+<script type="module">
+
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.9.0/firebase-app.js";
+import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/12.9.0/firebase-firestore.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyDNRtFRyhe6jD1qgwtzCE4EChoruyHEjbQ",
+  authDomain: "owid-future-store.firebaseapp.com",
+  projectId: "owid-future-store",
+  storageBucket: "owid-future-store.firebasestorage.app",
+  messagingSenderId: "890532668443",
+  appId: "1:890532668443:web:d4362e66efb642873ec4be",
+  measurementId: "G-DZFN3N2HLV"
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+async function loadProducts(){
+  const querySnapshot = await getDocs(collection(db,"المشاريع"));
+  const container = document.getElementById("products");
+
+  querySnapshot.forEach(doc=>{
+    const data = doc.data();
+
+    const card = document.createElement("div");
+    card.className="card";
+    card.innerHTML = `
+      <h3>${data.title}</h3>
+      <p>${data.description}</p>
+      <strong>${data.price} MAD</strong>
+    `;
+
+    container.appendChild(card);
+  });
+}
+
+loadProducts();
+
+</script>
+
+</body>
+  </html>
