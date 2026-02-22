@@ -3,37 +3,69 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mohamed Al-Aloui | Future Portfolio</title>
+<title>Mohamed Al-Aloui | Future Store</title>
 
 <style>
 
-/* ===== GENERAL ===== */
+/* ===== خلفية فضاء ===== */
 body{
   margin:0;
   font-family:Segoe UI;
   background:radial-gradient(circle,#050510,#000);
   color:white;
-  text-align:center;
-  transition:0.4s;
+  overflow-x:hidden;
 }
 
-body.light{
+/* نجوم */
+body::before{
+  content:"";
+  position:fixed;
+  width:200%;
+  height:200%;
+  background:url("https://www.transparenttextures.com/patterns/stardust.png");
+  animation:stars 150s linear infinite;
+  z-index:-2;
+}
+
+@keyframes stars{
+  from{transform:translate(0,0);}
+  to{transform:translate(-1000px,-800px);}
+}
+
+/* برق */
+.lightning{
+  position:fixed;
+  width:100%;
+  height:100%;
   background:white;
-  color:black;
+  opacity:0;
+  animation:flash 8s infinite;
+  z-index:-1;
 }
 
-.section{
-  max-width:1000px;
-  margin:80px auto;
-  padding:40px;
-  background:rgba(255,255,255,0.05);
-  border-radius:20px;
-  backdrop-filter:blur(10px);
-  box-shadow:0 0 20px rgba(0,255,255,0.2);
+@keyframes flash{
+  0%,95%,100%{opacity:0;}
+  96%{opacity:0.4;}
+  97%{opacity:0;}
 }
 
-/* ===== HEADER ===== */
+/* UFO */
+.ufo{
+  position:fixed;
+  top:100px;
+  left:-200px;
+  font-size:40px;
+  animation:fly 30s linear infinite;
+}
+
+@keyframes fly{
+  from{left:-200px;}
+  to{left:110%;}
+}
+
+/* Header */
 header{
+  text-align:center;
   padding:80px 20px;
 }
 
@@ -42,40 +74,38 @@ h1{
   text-shadow:0 0 25px cyan;
 }
 
-/* ===== BUTTONS ===== */
-.btn{
-  padding:10px 20px;
-  background:cyan;
-  color:black;
-  border:none;
+/* Sections */
+.section{
+  max-width:1000px;
+  margin:60px auto;
+  padding:40px;
+  background:rgba(255,255,255,0.05);
   border-radius:20px;
-  cursor:pointer;
-  margin:10px;
+  backdrop-filter:blur(10px);
+  box-shadow:0 0 20px rgba(0,255,255,0.2);
 }
 
-/* ===== SKILLS ===== */
+/* Skills */
 .skill{
   margin:20px 0;
-  text-align:left;
 }
-
 .bar{
-  height:12px;
+  height:10px;
   background:#222;
   border-radius:20px;
-  overflow:hidden;
 }
-
 .progress{
   height:100%;
   background:linear-gradient(90deg,cyan,blue);
+  border-radius:20px;
 }
 
-/* ===== PROJECTS ===== */
+/* Store Grid */
 #projects{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
   gap:20px;
+  padding:20px;
 }
 
 .project-card{
@@ -85,21 +115,10 @@ h1{
   box-shadow:0 0 15px cyan;
 }
 
-body.light .project-card{
-  background:#f2f2f2;
-}
-
-/* ===== ADMIN PANEL ===== */
+/* Alien Login */
 #adminPanel{
   display:none;
-  margin-top:30px;
-}
-
-input,textarea{
-  padding:10px;
-  margin:5px;
-  width:80%;
-  max-width:400px;
+  text-align:center;
 }
 
 .alien{
@@ -112,137 +131,127 @@ input,textarea{
   to{transform:translateY(-15px);}
 }
 
+input{
+  padding:10px;
+  margin:10px;
+}
+
+button{
+  padding:10px 20px;
+  background:cyan;
+  border:none;
+  border-radius:20px;
+  cursor:pointer;
+}
+
 </style>
 </head>
 
 <body>
 
+<div class="lightning"></div>
+<div class="ufo">🛸</div>
+
 <header>
   <h1>Mohamed Al-Aloui</h1>
   <p>Web Developer & Cybersecurity Enthusiast</p>
-  <button class="btn" onclick="toggleTheme()">🌙 Toggle Mode</button>
-  <a href="#" class="btn">📥 Download CV</a>
 </header>
 
-<!-- ABOUT -->
+<!-- About -->
 <section class="section">
 <h2>👋 About Me</h2>
-<p>
-Hello, I’m Mohamed Al-Aloui from Morocco.
-I am passionate about programming and web development,
-gradually improving my cybersecurity skills.
-</p>
+<p>Hello, I’m Mohamed Al-Aloui from Morocco.
+Passionate about programming and web development,
+gradually improving cybersecurity skills.</p>
 </section>
 
-<!-- SKILLS -->
+<!-- Skills -->
 <section class="section">
 <h2>🛠 Technical Skills</h2>
 
-<div class="skill">
-Python
+<div class="skill">Python
 <div class="bar"><div class="progress" style="width:70%"></div></div>
 </div>
 
-<div class="skill">
-HTML
+<div class="skill">HTML
 <div class="bar"><div class="progress" style="width:90%"></div></div>
 </div>
 
-<div class="skill">
-CSS
+<div class="skill">CSS
 <div class="bar"><div class="progress" style="width:85%"></div></div>
 </div>
 
-<div class="skill">
-JavaScript
+<div class="skill">JavaScript
 <div class="bar"><div class="progress" style="width:75%"></div></div>
 </div>
 
-<div class="skill">
-Cybersecurity (Beginner)
+<div class="skill">Cybersecurity
 <div class="bar"><div class="progress" style="width:40%"></div></div>
 </div>
 
 </section>
 
-<!-- PROJECTS -->
+<!-- Store -->
 <section class="section">
-<h2>🚀 Projects</h2>
+<h2>🚀 My Store</h2>
 <div id="projects"></div>
 </section>
 
-<!-- ADMIN LOGIN -->
+<!-- Alien Admin -->
 <section class="section">
-<h2>🔐 Admin Access</h2>
-<input type="password" id="adminPass" placeholder="Enter Secret Code">
-<button class="btn" onclick="login()">Login</button>
-<div id="alien" style="display:none;" class="alien">👽</div>
-
-<div id="adminPanel">
-<h3>Add Project</h3>
-<input type="text" id="title" placeholder="Project Title"><br>
-<textarea id="description" placeholder="Project Description"></textarea><br>
-<input type="text" id="link" placeholder="Project Link"><br>
-<button class="btn" onclick="addProject()">Add</button>
-</div>
+<h2>🔐 Alien Access</h2>
+<input type="password" id="pass" placeholder="Enter Alien Code">
+<button onclick="login()">Login</button>
+<div id="alien" class="alien" style="display:none;">👽</div>
 </section>
 
-<script>
+<!-- Firebase -->
+<script type="module">
 
-/* ===== THEME ===== */
-function toggleTheme(){
-  document.body.classList.toggle("light");
-}
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
 
-/* ===== PROJECT STORAGE ===== */
-let projects = JSON.parse(localStorage.getItem("projects")) || [];
+const firebaseConfig = {
+  apiKey: "AIzaSyDNRtFRyhe6jD1qgwtzCE4EChoruyHEjbQ",
+  authDomain: "owid-future-store.firebaseapp.com",
+  projectId: "owid-future-store",
+  storageBucket: "owid-future-store.firebasestorage.app",
+  messagingSenderId: "890532668443",
+  appId: "1:890532668443:web:d4362e66efb642873ec4be"
+};
 
-function renderProjects(){
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+async function loadProjects(){
+  const snapshot = await getDocs(collection(db,"المشاريع"));
   const container=document.getElementById("projects");
-  container.innerHTML="";
-  projects.forEach((p,index)=>{
+
+  snapshot.forEach(doc=>{
+    const data=doc.data();
     container.innerHTML+=`
-    <div class="project-card">
-      <h3>${p.title}</h3>
-      <p>${p.description}</p>
-      <a href="${p.link}" target="_blank">🔗 View</a><br><br>
-      <button onclick="deleteProject(${index})">Delete</button>
-    </div>
+      <div class="project-card">
+        <h3>${data.title}</h3>
+        <p>${data.description}</p>
+        <strong>${data.price} MAD</strong>
+      </div>
     `;
   });
 }
 
-function addProject(){
-  const title=document.getElementById("title").value;
-  const description=document.getElementById("description").value;
-  const link=document.getElementById("link").value;
+loadProjects();
 
-  projects.push({title,description,link});
-  localStorage.setItem("projects",JSON.stringify(projects));
-  renderProjects();
-  alert("Project Added 🚀");
-}
+</script>
 
-function deleteProject(index){
-  projects.splice(index,1);
-  localStorage.setItem("projects",JSON.stringify(projects));
-  renderProjects();
-}
-
-/* ===== LOGIN ===== */
+<script>
 function login(){
-  const pass=document.getElementById("adminPass").value;
-
+  const pass=document.getElementById("pass").value;
   if(pass==="ALIEN2026"){
-    document.getElementById("adminPanel").style.display="block";
     document.getElementById("alien").style.display="block";
   }else{
-    alert("Access Denied ❌");
+    alert("Access Denied");
   }
 }
-
-renderProjects();
-
 </script>
 
 </body>
