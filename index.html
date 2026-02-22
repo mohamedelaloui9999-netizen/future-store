@@ -1,17 +1,162 @@
+
+أنت قلت:
+صورة تم تحميلها
+هاذا  جيد اتاج بعض تعديل مثل اضفة برق  او توسعت المتجر يكون كبير  اويد ركبه فضائية  في خلف الفضاء 
+
+قال ChatGPT:
+ممتاز 👌 التصميم جميل كبداية، وفكرة الفضاء مناسبة جدًا لهويتك 💫
+خلينا نطوره بشكل احترافي أكثر 🔥
+
+⚡ إضافة تأثير البرق (Lightning Effect)
+🎯 أفكار احترافية:
+برق متحرك بالخلفية
+
+يظهر كل 5–8 ثواني.
+
+يعمل Flash خفيف للشاشة.
+
+يعطي إحساس طاقة وقوة (مناسب للـ Cybersecurity ⚡).
+
+Glow كهربائي حول اسمك
+
+تأثير توهج أزرق كهربائي حول:
+
+Mohamed Al-Aloui
+ممكن تضيف animation خفيف يعمل flicker.
+
+برق عند الضغط
+
+لما المستخدم يضغط على زر أو منتج.
+
+يظهر تأثير شرارة صغيرة.
+
+لو تحب أكتب لك كود CSS جاهز للتأثير الكهربائي قول لي 👨‍💻
+
+🚀 إضافة مركبة فضائية بالخلفية
+💡 أفضل طريقة احترافية:
+تضيف مركبة صغيرة جدًا في أحد الزوايا.
+
+تتحرك ببطء من اليمين لليسار (animation 30 ثانية مثلاً).
+
+يكون عليها glow خفيف.
+
+⚠️ مهم: لا تكبرها كثير حتى لا تشتت الزائر.
+
+🛒 تكبير وتطوير المتجر
+الآن عندك:
+
+"Products will appear here from Firebase."
+
+هذا يبدو بسيط جدًا — لازم نخليه أقوى 👇
+
+🔥 تطوير شكل المتجر:
+1️⃣ كروت منتجات كبيرة
+صورة منتج كبيرة
+
+اسم واضح
+
+السعر بلون مميز (أخضر أو أزرق نيون)
+
+زر Buy Now متوهج
+
+2️⃣ Grid احترافي
+بدل نص عادي، خليها:
+
+[ منتج ]   [ منتج ]
+[ منتج ]   [ منتج ]
+على الموبايل:
+
+عمود واحد
+
+مسافات أكبر
+
+ظل خفيف للكروت
+
+3️⃣ عنوان المتجر يكون ضخم ومميز
+بدل:
+🚀 My Store
+
+خليه مثلاً:
+
+🚀 Space Tech Store
+أو:
+
+🛸 Cyber Store
+مع خط أعرض + توهج نيون.
+
+🌌 اقتراح تصميم متكامل احترافي
+لو جمعت كل الأفكار:
+
+خلفية فضاء متحركة ببطء
+
+نجوم تتحرك خفيف (Parallax)
+
+مركبة فضائية صغيرة تمر أحيانًا
+
+برق خفيف كل فترة
+
+اسمك بتأثير كهربائي
+
+متجر بكروت نيون حديثة
+
+🔥 هذا سيجعل موقعك يبدو مثل موقع SaaS احترافي وليس مجرد صفحة GitHub.
+
+لو تحب 👇
+قل لي:
+
+هل موقعك HTML + CSS فقط؟
+
+أم تستخدم React؟
+
+هل تريد التأثيرات خفيفة أم قوية جدًا؟
+
+وأبني لك نسخة تصميم جاهزة تناسب أسلوبك 💻✨
+
+
+أنت قلت:
+اعطيك كود تعدل إلى افضل
+
+قال ChatGPT:
+أكيد 🔥 أعطني الكود وسأعدّله لك إلى نسخة احترافية أقوى.
+
+أرسل:
+
+ملف HTML
+
+وملف CSS
+
+وإذا عندك JavaScript أرسله أيضًا
+
+وسأضيف لك:
+
+⚡ تأثير برق احترافي
+
+🚀 مركبة فضائية متحركة
+
+🌌 خلفية فضاء أعمق وأجمل
+
+🛒 متجر بتصميم Grid حديث وكروت نيون
+
+✨ تحسين الخطوط والمسافات ليبدو الموقع Premium
+
+انسخ الكود هنا وسأبدأ التعديل فورًا 👨‍💻🔥
+
+
+أنت قلت:
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mohamed Al-Aloui | Future Store</title>
+<title>🚀 Mohamed Al-Aloui | Future Store</title>
 
 <style>
 
-/* ===== خلفية فضاء ===== */
+/* ====== خلفية فضاء متحركة ====== */
 body{
   margin:0;
-  font-family:Segoe UI;
-  background:radial-gradient(circle,#050510,#000);
+  font-family:Arial, sans-serif;
+  background:black;
   color:white;
   overflow-x:hidden;
 }
@@ -23,39 +168,44 @@ body::before{
   width:200%;
   height:200%;
   background:url("https://www.transparenttextures.com/patterns/stardust.png");
-  animation:stars 150s linear infinite;
+  animation:stars 120s linear infinite;
   z-index:-2;
 }
 
 @keyframes stars{
   from{transform:translate(0,0);}
-  to{transform:translate(-1000px,-800px);}
+  to{transform:translate(-1000px,-1000px);}
 }
 
 /* برق */
 .lightning{
   position:fixed;
-  width:100%;
-  height:100%;
+  top:0;
+  left:50%;
+  width:3px;
+  height:100vh;
   background:white;
   opacity:0;
-  animation:flash 8s infinite;
+  animation:flash 6s infinite;
   z-index:-1;
 }
 
 @keyframes flash{
-  0%,95%,100%{opacity:0;}
-  96%{opacity:0.4;}
-  97%{opacity:0;}
+  0%{opacity:0;}
+  1%{opacity:1;}
+  2%{opacity:0;}
+  50%{opacity:0;}
+  51%{opacity:1;}
+  52%{opacity:0;}
 }
 
-/* UFO */
+/* سفينة فضاء */
 .ufo{
   position:fixed;
-  top:100px;
+  top:120px;
   left:-200px;
-  font-size:40px;
-  animation:fly 30s linear infinite;
+  font-size:50px;
+  animation:fly 25s linear infinite;
 }
 
 @keyframes fly{
@@ -63,85 +213,62 @@ body::before{
   to{left:110%;}
 }
 
-/* Header */
+/* الهيدر */
 header{
   text-align:center;
-  padding:80px 20px;
+  padding:60px 20px;
+  background:rgba(0,0,0,0.6);
+  backdrop-filter:blur(10px);
 }
 
 h1{
-  font-size:42px;
-  text-shadow:0 0 25px cyan;
+  font-size:40px;
+  text-shadow:0 0 20px cyan;
 }
 
-/* Sections */
-.section{
-  max-width:1000px;
-  margin:60px auto;
-  padding:40px;
-  background:rgba(255,255,255,0.05);
-  border-radius:20px;
-  backdrop-filter:blur(10px);
-  box-shadow:0 0 20px rgba(0,255,255,0.2);
-}
-
-/* Skills */
-.skill{
-  margin:20px 0;
-}
-.bar{
-  height:10px;
-  background:#222;
-  border-radius:20px;
-}
-.progress{
-  height:100%;
-  background:linear-gradient(90deg,cyan,blue);
-  border-radius:20px;
-}
-
-/* Store Grid */
+/* الكروت */
 #projects{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
   gap:20px;
-  padding:20px;
+  padding:40px;
 }
 
 .project-card{
-  background:#111;
+  width:260px;
   padding:20px;
+  background:rgba(255,255,255,0.08);
   border-radius:15px;
-  box-shadow:0 0 15px cyan;
+  backdrop-filter:blur(10px);
+  transition:0.4s;
+  box-shadow:0 0 15px rgba(0,255,255,0.3);
 }
 
-/* Alien Login */
-#adminPanel{
-  display:none;
+.project-card:hover{
+  transform:scale(1.08);
+  box-shadow:0 0 30px cyan;
+}
+
+/* إطار معلومات */
+.info-box{
   text-align:center;
+  margin:40px auto;
+  padding:20px;
+  max-width:600px;
+  border:2px solid cyan;
+  border-radius:15px;
+  animation:colorChange 5s infinite alternate;
 }
 
-.alien{
-  font-size:60px;
-  animation:float 2s infinite alternate;
+@keyframes colorChange{
+  from{border-color:cyan;}
+  to{border-color:magenta;}
 }
 
-@keyframes float{
-  from{transform:translateY(0);}
-  to{transform:translateY(-15px);}
-}
-
-input{
-  padding:10px;
-  margin:10px;
-}
-
-button{
-  padding:10px 20px;
-  background:cyan;
-  border:none;
-  border-radius:20px;
-  cursor:pointer;
+a{
+  color:#00ffff;
+  text-decoration:none;
 }
 
 </style>
@@ -153,57 +280,27 @@ button{
 <div class="ufo">🛸</div>
 
 <header>
-  <h1>Mohamed Al-Aloui</h1>
+  <h1>👋 مرحباً، أنا محمد العلوي من المغرب</h1>
   <p>Web Developer & Cybersecurity Enthusiast</p>
 </header>
 
-<!-- About -->
-<section class="section">
-<h2>👋 About Me</h2>
-<p>Hello, I’m Mohamed Al-Aloui from Morocco.
-Passionate about programming and web development,
-gradually improving cybersecurity skills.</p>
-</section>
-
-<!-- Skills -->
-<section class="section">
-<h2>🛠 Technical Skills</h2>
-
-<div class="skill">Python
-<div class="bar"><div class="progress" style="width:70%"></div></div>
+<div class="info-box">
+  <h2>📩 تواصل معي</h2>
+  <p>Instagram: 
+    <a href="https://instagram.com/m.o.h.a.m.e.d.9.9.9.9" target="_blank">
+    m.o.h.a.m.e.d.9.9.9.9
+    </a>
+  </p>
+  <p>Email: 
+    <a href="mailto:mohamedelaloui333@gmail.com">
+    mohamedelaloui333@gmail.com
+    </a>
+  </p>
 </div>
 
-<div class="skill">HTML
-<div class="bar"><div class="progress" style="width:90%"></div></div>
-</div>
+<h2 style="text-align:center;">🚀 مشاريعي</h2>
 
-<div class="skill">CSS
-<div class="bar"><div class="progress" style="width:85%"></div></div>
-</div>
-
-<div class="skill">JavaScript
-<div class="bar"><div class="progress" style="width:75%"></div></div>
-</div>
-
-<div class="skill">Cybersecurity
-<div class="bar"><div class="progress" style="width:40%"></div></div>
-</div>
-
-</section>
-
-<!-- Store -->
-<section class="section">
-<h2>🚀 My Store</h2>
 <div id="projects"></div>
-</section>
-
-<!-- Alien Admin -->
-<section class="section">
-<h2>🔐 Alien Access</h2>
-<input type="password" id="pass" placeholder="Enter Alien Code">
-<button onclick="login()">Login</button>
-<div id="alien" class="alien" style="display:none;">👽</div>
-</section>
 
 <!-- Firebase -->
 <script type="module">
@@ -224,34 +321,26 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
 async function loadProjects(){
-  const snapshot = await getDocs(collection(db,"المشاريع"));
-  const container=document.getElementById("projects");
+  const querySnapshot = await getDocs(collection(db,"المشاريع"));
+  const container = document.getElementById("projects");
 
-  snapshot.forEach(doc=>{
-    const data=doc.data();
-    container.innerHTML+=`
-      <div class="project-card">
-        <h3>${data.title}</h3>
-        <p>${data.description}</p>
-        <strong>${data.price} MAD</strong>
-      </div>
-    `;
+  querySnapshot.forEach(doc=>{
+    const data = doc.data();
+
+    const card = document.createElement("div");
+    card.className="project-card";
+    card.innerHTML = 
+      <h3>${data.title}</h3>
+      <p>${data.description}</p>
+      <strong>${data.price} MAD</strong>
+    ;
+
+    container.appendChild(card);
   });
 }
 
 loadProjects();
 
-</script>
-
-<script>
-function login(){
-  const pass=document.getElementById("pass").value;
-  if(pass==="ALIEN2026"){
-    document.getElementById("alien").style.display="block";
-  }else{
-    alert("Access Denied");
-  }
-}
 </script>
 
 </body>
