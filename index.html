@@ -1,167 +1,21 @@
-
-أنت قلت:
-صورة تم تحميلها
-هاذا  جيد اتاج بعض تعديل مثل اضفة برق  او توسعت المتجر يكون كبير  اويد ركبه فضائية  في خلف الفضاء 
-
-قال ChatGPT:
-ممتاز 👌 التصميم جميل كبداية، وفكرة الفضاء مناسبة جدًا لهويتك 💫
-خلينا نطوره بشكل احترافي أكثر 🔥
-
-⚡ إضافة تأثير البرق (Lightning Effect)
-🎯 أفكار احترافية:
-برق متحرك بالخلفية
-
-يظهر كل 5–8 ثواني.
-
-يعمل Flash خفيف للشاشة.
-
-يعطي إحساس طاقة وقوة (مناسب للـ Cybersecurity ⚡).
-
-Glow كهربائي حول اسمك
-
-تأثير توهج أزرق كهربائي حول:
-
-Mohamed Al-Aloui
-ممكن تضيف animation خفيف يعمل flicker.
-
-برق عند الضغط
-
-لما المستخدم يضغط على زر أو منتج.
-
-يظهر تأثير شرارة صغيرة.
-
-لو تحب أكتب لك كود CSS جاهز للتأثير الكهربائي قول لي 👨‍💻
-
-🚀 إضافة مركبة فضائية بالخلفية
-💡 أفضل طريقة احترافية:
-تضيف مركبة صغيرة جدًا في أحد الزوايا.
-
-تتحرك ببطء من اليمين لليسار (animation 30 ثانية مثلاً).
-
-يكون عليها glow خفيف.
-
-⚠️ مهم: لا تكبرها كثير حتى لا تشتت الزائر.
-
-🛒 تكبير وتطوير المتجر
-الآن عندك:
-
-"Products will appear here from Firebase."
-
-هذا يبدو بسيط جدًا — لازم نخليه أقوى 👇
-
-🔥 تطوير شكل المتجر:
-1️⃣ كروت منتجات كبيرة
-صورة منتج كبيرة
-
-اسم واضح
-
-السعر بلون مميز (أخضر أو أزرق نيون)
-
-زر Buy Now متوهج
-
-2️⃣ Grid احترافي
-بدل نص عادي، خليها:
-
-[ منتج ]   [ منتج ]
-[ منتج ]   [ منتج ]
-على الموبايل:
-
-عمود واحد
-
-مسافات أكبر
-
-ظل خفيف للكروت
-
-3️⃣ عنوان المتجر يكون ضخم ومميز
-بدل:
-🚀 My Store
-
-خليه مثلاً:
-
-🚀 Space Tech Store
-أو:
-
-🛸 Cyber Store
-مع خط أعرض + توهج نيون.
-
-🌌 اقتراح تصميم متكامل احترافي
-لو جمعت كل الأفكار:
-
-خلفية فضاء متحركة ببطء
-
-نجوم تتحرك خفيف (Parallax)
-
-مركبة فضائية صغيرة تمر أحيانًا
-
-برق خفيف كل فترة
-
-اسمك بتأثير كهربائي
-
-متجر بكروت نيون حديثة
-
-🔥 هذا سيجعل موقعك يبدو مثل موقع SaaS احترافي وليس مجرد صفحة GitHub.
-
-لو تحب 👇
-قل لي:
-
-هل موقعك HTML + CSS فقط؟
-
-أم تستخدم React؟
-
-هل تريد التأثيرات خفيفة أم قوية جدًا؟
-
-وأبني لك نسخة تصميم جاهزة تناسب أسلوبك 💻✨
-
-
-أنت قلت:
-اعطيك كود تعدل إلى افضل
-
-قال ChatGPT:
-أكيد 🔥 أعطني الكود وسأعدّله لك إلى نسخة احترافية أقوى.
-
-أرسل:
-
-ملف HTML
-
-وملف CSS
-
-وإذا عندك JavaScript أرسله أيضًا
-
-وسأضيف لك:
-
-⚡ تأثير برق احترافي
-
-🚀 مركبة فضائية متحركة
-
-🌌 خلفية فضاء أعمق وأجمل
-
-🛒 متجر بتصميم Grid حديث وكروت نيون
-
-✨ تحسين الخطوط والمسافات ليبدو الموقع Premium
-
-انسخ الكود هنا وسأبدأ التعديل فورًا 👨‍💻🔥
-
-
-أنت قلت:
 <!DOCTYPE html>
 <html lang="ar">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>🚀 Mohamed Al-Aloui | Future Store</title>
+<title>🚀 Future Store</title>
 
 <style>
-
-/* ====== خلفية فضاء متحركة ====== */
 body{
   margin:0;
   font-family:Arial, sans-serif;
   background:black;
   color:white;
   overflow-x:hidden;
+  text-align:center;
 }
 
-/* نجوم */
+/* خلفية نجوم */
 body::before{
   content:"";
   position:fixed;
@@ -177,171 +31,78 @@ body::before{
   to{transform:translate(-1000px,-1000px);}
 }
 
-/* برق */
-.lightning{
+/* شاشة البداية */
+#alienOverlay{
   position:fixed;
-  top:0;
-  left:50%;
-  width:3px;
-  height:100vh;
-  background:white;
-  opacity:0;
-  animation:flash 6s infinite;
-  z-index:-1;
-}
-
-@keyframes flash{
-  0%{opacity:0;}
-  1%{opacity:1;}
-  2%{opacity:0;}
-  50%{opacity:0;}
-  51%{opacity:1;}
-  52%{opacity:0;}
-}
-
-/* سفينة فضاء */
-.ufo{
-  position:fixed;
-  top:120px;
-  left:-200px;
-  font-size:50px;
-  animation:fly 25s linear infinite;
-}
-
-@keyframes fly{
-  from{left:-200px;}
-  to{left:110%;}
-}
-
-/* الهيدر */
-header{
-  text-align:center;
-  padding:60px 20px;
-  background:rgba(0,0,0,0.6);
-  backdrop-filter:blur(10px);
-}
-
-h1{
-  font-size:40px;
-  text-shadow:0 0 20px cyan;
-}
-
-/* الكروت */
-#projects{
+  width:100%;
+  height:100%;
+  background:black;
   display:flex;
-  flex-wrap:wrap;
   justify-content:center;
-  gap:20px;
+  align-items:center;
+  z-index:9999;
+  animation:fadeOut 3s forwards;
+  animation-delay:3s;
+}
+
+#alienOverlay img{
+  width:200px;
+  animation:float 2s infinite alternate;
+}
+
+@keyframes float{
+  from{transform:translateY(0px);}
+  to{transform:translateY(-20px);}
+}
+
+@keyframes fadeOut{
+  to{opacity:0; visibility:hidden;}
+}
+
+header{
   padding:40px;
 }
 
-.project-card{
-  width:260px;
-  padding:20px;
-  background:rgba(255,255,255,0.08);
-  border-radius:15px;
-  backdrop-filter:blur(10px);
-  transition:0.4s;
-  box-shadow:0 0 15px rgba(0,255,255,0.3);
-}
-
-.project-card:hover{
-  transform:scale(1.08);
-  box-shadow:0 0 30px cyan;
-}
-
-/* إطار معلومات */
-.info-box{
-  text-align:center;
-  margin:40px auto;
-  padding:20px;
-  max-width:600px;
-  border:2px solid cyan;
-  border-radius:15px;
-  animation:colorChange 5s infinite alternate;
-}
-
-@keyframes colorChange{
-  from{border-color:cyan;}
-  to{border-color:magenta;}
+section{
+  padding:30px;
 }
 
 a{
   color:#00ffff;
   text-decoration:none;
 }
-
 </style>
 </head>
 
 <body>
 
-<div class="lightning"></div>
-<div class="ufo">🛸</div>
+<!-- Alien عند الدخول -->
+<div id="alienOverlay">
+  <img src="https://cdn-icons-png.flaticon.com/512/4712/4712035.png" alt="Alien">
+</div>
 
 <header>
-  <h1>👋 مرحباً، أنا محمد العلوي من المغرب</h1>
+  <h1>Mohamed Al-Aloui</h1>
   <p>Web Developer & Cybersecurity Enthusiast</p>
 </header>
 
-<div class="info-box">
-  <h2>📩 تواصل معي</h2>
-  <p>Instagram: 
-    <a href="https://instagram.com/m.o.h.a.m.e.d.9.9.9.9" target="_blank">
-    m.o.h.a.m.e.d.9.9.9.9
-    </a>
-  </p>
-  <p>Email: 
-    <a href="mailto:mohamedelaloui333@gmail.com">
-    mohamedelaloui333@gmail.com
-    </a>
-  </p>
-</div>
+<section>
+<h2>📩 Contact</h2>
+<p>Email: 
+<a href="mailto:Mohamedelaloui333@gmail.com">
+Mohamedelaloui333@gmail.com
+</a></p>
 
-<h2 style="text-align:center;">🚀 مشاريعي</h2>
+<p>Instagram:
+<a href="https://instagram.com/m.o.h.a.m.e.d.9.9.9.9" target="_blank">
+m.o.h.a.m.e.d.9.9.9.9
+</a></p>
+</section>
 
-<div id="projects"></div>
-
-<!-- Firebase -->
-<script type="module">
-
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
-import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
-
-const firebaseConfig = {
-  apiKey: "AIzaSyDNRtFRyhe6jD1qgwtzCE4EChoruyHEjbQ",
-  authDomain: "owid-future-store.firebaseapp.com",
-  projectId: "owid-future-store",
-  storageBucket: "owid-future-store.firebasestorage.app",
-  messagingSenderId: "890532668443",
-  appId: "1:890532668443:web:d4362e66efb642873ec4be"
-};
-
-const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
-
-async function loadProjects(){
-  const querySnapshot = await getDocs(collection(db,"المشاريع"));
-  const container = document.getElementById("projects");
-
-  querySnapshot.forEach(doc=>{
-    const data = doc.data();
-
-    const card = document.createElement("div");
-    card.className="project-card";
-    card.innerHTML = 
-      <h3>${data.title}</h3>
-      <p>${data.description}</p>
-      <strong>${data.price} MAD</strong>
-    ;
-
-    container.appendChild(card);
-  });
-}
-
-loadProjects();
-
-</script>
+<section>
+<h2>🚀 My Store</h2>
+<p>Products will appear here from Firebase.</p>
+</section>
 
 </body>
 </html>
